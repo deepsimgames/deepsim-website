@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSim - Colony Surge</title> <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* CSS specifically for this page's hero section */
+
+        /* Make the hero section full viewport height */
+        .project-colony-surge-hero {
+            width: 100%; /* Ensure it takes full width */
+            height: 100vh; /* <<< --- Make it full viewport height */
+            position: relative; /* Needed for absolute positioning of children */
+            overflow: hidden; /* Hide parts of the image that exceed height */
+            /* If using background-image method, place it here: */
+            /* background-image: url('path/to/your/colony-surge-hero-image.jpg'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+        }
+
+        /* Style for the image wrapper (if using img tag) */
+        .project-colony-surge-hero .project-colony-surge-hero-image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Ensure image is below overlay/content */
+        }
+
+         .project-colony-surge-hero .project-colony-surge-hero-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the wrapper while maintaining aspect ratio */
+         }
+
+
+        /* Style for the overlay */
+        .project-colony-surge-hero .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Example dark overlay */
+            z-index: 2; /* Ensure overlay is above image, below content */
+        }
+
+
+        /* Style for the content positioned over the hero */
+        .project-colony-surge-hero .hero-content {
+            position: absolute; /* Position relative to the hero section */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for exact centering */
+            z-index: 3; /* Ensure content is above image and overlay */
+            color: white; /* Text color over the image */
+            text-align: center; /* Center text horizontally */
+            width: 100%; /* Allow text to take up width */
+            padding: 0 20px; /* Add some padding */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .project-colony-surge-hero .hero-content h1 {
+            color: white; /* Title color */
+            font-size: 3em; /* Adjust size as needed */
+            margin-bottom: 10px;
+        }
+
+        .project-colony-surge-hero .hero-coming-soon {
+            color: white; /* Coming soon text color */
+            font-size: 1.2em; /* Adjust size as needed */
+            font-weight: regular;
+        }
+
+        /* Adjust main content padding to start below the hero */
+        /* This ensures content isn't hidden behind the full-height hero */
+         main.project-detail-content {
+             padding-top: 40px; /* Add space above content */
+             padding-bottom: 40px;
+             /* If your header is fixed/sticky, you might need to add
+                padding-top to the body or main based on header height */
+         }
+
+         .project-detail-content .container {
+             /* Ensure container styles are applied */
+         }
+
+         .project-detail-description h3 {
+             margin-top: 0; /* Remove top margin if it conflicts with padding */
+         }
+
+
+         .launch-announcement {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #28a745;
+            font-size: 1.2em;
+         }
+
+         .launch-announcement h3 {
+             color: #000; /* Ensure heading color matches */
+             margin-top: 0;
+         }
+
+
+         /* Add styles for new sections if needed */
+         .game-features h3, .screenshots h3 {
+             margin-top: 30px;
+             margin-bottom: 20px;
+         }
+
+         .screenshot-gallery {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+             gap: 15px;
+         }
+
+         .screenshot-gallery img {
+             display: block;
+             width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+         }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+             <a href="index.html">
+                <img src="logo deepsim.png" alt="DeepSim Logo" class="logo">
+            </a>    
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                     <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-colony-surge-hero">
+        <div class="project-colony-surge-hero-image-wrapper">
+             <img src="Colony Surge detail banner.png" alt="Colony Surge Hero Image" class="project-colony-surge-hero-image">
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content container">
+            <h1>Project Colony Surge</h1> <p class="hero-coming-soon"> Coming Soon </p> </div>
+    </section>
+
+    <main class="project-detail-content"> <div class="container">
+            <div class="project-detail-description"> <h3>About the Game</h3> <p>Embark on a minuscule journey within the complex world of an ant colony, where your role is crucial to the survival and prosperity of countless fellow workers. Every duty you undertake, from the tireless search for provisions across vast, challenging terrains to the desperate defense against colossal, predatory threats, directly contributes to the collective strength. Dedicate yourself to these essential tasks, and witness your ant family flourish, expanding its intricate network and securing its place against the formidable dangers of the oversized world outside.</p>
+                </div>
+
+            <div class="launch-announcement"> <h3>Launching Soon!</h3>
+                 </div>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DeepSim. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

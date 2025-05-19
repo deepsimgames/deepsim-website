@@ -1,50 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DeepSim Games</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSim - Dive Deeper into Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>DeepSim Games</h1>
-    <nav>
-      <ul>
-        <li><a href="#project-genesis">Project Genesis</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container header-content">
+             <a href="index.html">
+                <img src="logo deepsim.png" alt="DeepSim Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section id="hero">
-      <h2>Explore the Universe of Gaming</h2>
-      <p>Embark on interstellar adventures with DeepSim Games.</p>
+    <section class="hero">
+        <div class="hero-image-wrapper">
+            <img src="banner image.png" alt="Space and Spaceship Banner" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content container">
+             <h3 class="hero-intro-text">Crafting Immersive Multiplayer Simulations</h3>
+            <h1>Dive Deeper into Simulation</h1>
+            <p>DeepSim is an indie game studio crafting immersive multiplayer simulation games set in vibrant, evolving worlds.</p>
+            <a href="#projects" class="cta-button">Discover Our Worlds</a>
+        </div>
     </section>
 
-    <section id="project-genesis" class="tile">
-      <h2>Project Genesis</h2>
-      <img src="project_genesis.png" alt="Project Genesis Cover" />
-      <p><strong>Coming Soon</strong></p>
-      <p>
-        Project Genesis is a deep simulation experience set in a dynamically evolving galaxy. Players will encounter unpredictable fog-of-war exploration, intricate world-building mechanics, and AI-driven civilizations. Strategy meets immersion in a universe where every decision ripples across time and space.
-      </p>
+    <section class="about">
+        <div class="container">
+            <h2>About DeepSim</h2>
+            <p>We're a passionate indie game studio driven by the desire to create multiplayer simulation experiences that spark imagination. By blending handcrafted art, intelligent backend systems, and the versatility of Unity, we're building games that are not only deeply engaging but also feel alive and constantly changing.</p>
+            <p>Our goal is simple: to create living, breathing worlds that you can explore and shape with your friends, forging unique stories and unforgettable moments.</p>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:team@deepsim.games">team@deepsim.games</a></p>
-      <div class="social-media">
-        <a href="https://www.linkedin.com/company/deep-sim" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/deepsimofficial" target="_blank">Instagram</a>
-        <a href="https://x.com/DeepSimOfficial" target="_blank">Twitter</a>
-      </div>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Our Projects</h2>
+            <div class="project-grid">
+                <div class="project-card genesis-card">
+                    <div class="project-image">
+                         <img src="project_genesis.png" alt="Project Genesis">
+                    </div>
+                    <a href="project-genesis.html" class="project-info-link">
+                    <div class="project-info">
+                        <h3>Project Genesis - Coming Soon</h3>
+                        <p>Before the journey began, our world was slowly dying. There were too many people, and not enough resources, which led to terrible wars. People stopped dreaming of going to space ...</p>
+                        <p class="coming-soon">Coming Soon</p>
+                    </div></a>
+                </div>
+                <div class="project-card ants-card">
+                    <div class="project-image">
+                         <img src="Colony Surge image.png" alt="Project Ants">
+                    </div>
+                    <a href="project-colony-surge.html" class="project-info-link">
+                    <div class="project-info">
+                        <h3>Project Colony Surge - Coming Soon</h3>
+                        <p>Embark on a minuscule journey within the complex world of an ant colony, where your role is crucial to the survival and prosperity of countless fellow workers. Every duty you ...</p>
+                        <p class="coming-soon">Coming Soon</p>
+                    </div></a>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 DeepSim Games. All rights reserved.</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DeepSim. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

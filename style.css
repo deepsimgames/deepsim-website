@@ -1,70 +1,1181 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d0d2b;
-  color: #ffffff;
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e141b;
+    color: #d4d4d4;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
-  background-color: #1a1a40;
-  padding: 20px;
-  text-align: center;
+    background-color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-  margin-bottom: 10px;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+nav li {
 }
 
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
+nav a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-section {
-  padding: 60px 20px;
-  text-align: center;
+nav a:hover {
+    color: #555;
 }
 
-#hero {
-  background: radial-gradient(circle at top center, #1a1a40, #0d0d2b);
-  padding: 80px 20px;
+.hero {
+    position: relative;
+    color: #fff;
+    /* text-align: center;  <-- REMOVE THIS LINE */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin-top: 0;
+    overflow: hidden;
 }
 
-.tile {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 40px 20px;
-  max-width: 700px;
-  margin: auto;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+.hero-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.tile img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 20px 0;
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.social-media a {
-  margin: 0 10px;
-  color: #61dafb;
-  text-decoration: none;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 80%;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: left; /* <-- ADD THIS LINE */
+    /* The .container class will keep the block centered horizontally,
+       but the text-align: left will align the content inside the block to the left. */
+}
+
+/* Optional: Style the new intro text specifically */
+.hero-intro-text {
+    font-size: 1.2em; /* Adjust font size */
+    margin-bottom: 10px; /* Add space below */
+    font-weight: 600; /* Make it slightly bolder */
+}
+
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-align: left; /* Ensure heading aligns left */
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    font-weight: 400;
+    text-align: left; /* Ensure paragraphs align left */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    /* By default, inline-block respects parent's text-align, so this should align left now */
+}
+
+.cta-button:hover {
+    background-color: #fff;
+}
+
+.about {
+    padding: 60px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #444;
+}
+
+.projects {
+    padding: 60px 20px;
+    background-color: #0e141b;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #eee;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #1a2530;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* In your style.css file, find or add these rules */
+
+.project-card .project-image img{
+    width: 100%;
+    height: 100%; /* Make the image fill the container's dimensions */
+    object-fit: cover; /* Crop the image to cover the space without distortion */
+    object-position: center; /* Explicitly set the object position to the center */
+    display: block;
+}
+
+.project-card .project-image img{
+    width: 100%;
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Crop the image to cover the space without distortion */
+    display: block;
+}
+
+/* Add or modify styles here to control project image size and centering */
+
+/* Style for the container holding the project image */
+.project-grid .project-card .project-image {
+    height: 250px; /* Set a fixed height for all project image containers */
+    overflow: hidden; /* Hide any part of the image that exceeds the container */
+    display: flex; /* Use flexbox to help center the image */
+    justify-content: center; /* Center horizontally in flex container */
+    align-items: center; /* Center vertically in flex container */
+}
+
+/* Style for the image itself within the container */
+.project-grid .project-card .project-image img {
+    display: block; /* Remove extra space below the image */
+    width: 100%; /* Allow image to take full width of container */
+    height: 100%; /* Allow image to take full height of container */
+    object-fit: cover; /* Crop the image to cover the container while maintaining aspect ratio */
+    /* object-position: center; /* Ensure the center of the image is prioritized (default for object-fit: cover) */
+}
+
+/* Ensure other styles from your style.css are not conflicting */
+/* You might need to adjust padding/margins on .project-card or .project-info */
+
+
+/* Responsive adjustment for project image height on smaller screens */
+@media (max-width: 768px) {
+    .project-card .project-image {
+        max-height: 160px; /* Adjust max height for mobile */
+    }
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+    text-align: left; /* Ensure card headings align left */
+}
+
+.project-card p {
+    color: #bbb;
+    margin-bottom: 10px;
+    text-align: left; /* Ensure card paragraphs align left */
+}
+
+.project-card a {
+    display: inline-block;
+    color: #5cb85c;
+    text-decoration: none;
+    font-weight: regular;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #eee;
+}
+
+/* ants-card padding seems redundant, consider removing or clarifying purpose */
+.ants-card {
+     /* padding: 15px;  Consider removing if .project-info is sufficient */
+}
+
 
 footer {
-  background-color: #1a1a40;
-  text-align: center;
-  padding: 20px;
+    background-color: #141e27;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    max-width: 960px;
+}
+
+.coming-soon {
+    font-size: 0.8em;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding-top: 100px; /* Adjust padding-top for fixed header */
+        height: auto; /* Allow height to adjust */
+        min-height: 100vh; /* Ensure minimum height */
+        /* Keep align-items: center if you want the content block itself centered horizontally */
+        /* If you want the block pushed left on small screens, you'd need to change align-items or use margin */
+    }
+
+    .hero-content {
+        padding: 15px; /* Adjust padding for smaller screens */
+        max-width: 95%; /* Use more width on small screens */
+        text-align: left; /* Ensure it stays left-aligned */
+    }
+
+    /* Explicitly ensure text elements within hero-content are left-aligned on mobile */
+     .hero-content h1,
+    .hero-content p,
+    .hero-content .cta-button {
+        text-align: left;
+        margin-left: 0;
+        margin-right: auto; /* Helps align blocks/inline-blocks left */
+    }
+
+
+    .hero h1 {
+        font-size: 3em; /* Keep mobile font size */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+     .hero-intro-text {
+        font-size: 1em; /* Adjust intro text font size for mobile */
+     }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+     .project-card h3,
+     .project-card p {
+         text-align: left; /* Ensure card text aligns left on mobile */
+     }
+}
+
+/* Add this block to your existing style.css */
+/* --- Careers Page Styling - Dark Theme --- */
+
+/* Styling for the main content area of the careers page */
+.careers-page-content {
+    padding: 60px 20px; /* Standard section padding top/bottom and horizontal */
+    background-color: #0e141b; /* Dark background matching the body and projects section */
+    color: #d4d4d4; /* Light text color for readability on dark background */
+}
+
+/* Styling for the main heading on the careers page */
+.careers-page-content h2 {
+     font-size: 2.5em;
+     text-align: center;
+     margin-bottom: 30px; /* Add more space below the heading */
+     color: #eee; /* Lighter heading color for contrast */
+}
+
+/* Styling for general paragraphs in the careers page main content */
+.careers-page-content p {
+     max-width: 800px; /* Limit paragraph width for readability */
+     margin: 0 auto 20px; /* Center paragraphs horizontally and add bottom margin */
+     color: #bbb; /* Slightly lighter grey for general text */
+}
+
+/* Container for the job listing cards, using CSS Grid */
+.career-listings {
+    display: grid;
+    /* Creates a responsive grid: minimum card width 300px, fills available space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between grid items (cards) */
+    max-width: 900px; /* Maximum width for the entire grid container */
+    margin: 40px auto; /* Center the grid and add vertical margin */
+}
+
+/* Styling for each individual job role card */
+.career-card {
+    background-color: #1a2530; /* Dark background for the card, matching project cards */
+    border-radius: 8px; /* Rounded corners for the card */
+    padding: 25px; /* Internal spacing within the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect for depth, matching project cards */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content (title, details) vertically */
+    justify-content: space-between; /* Distribute space vertically within the card */
+}
+
+/* Hover effect for job cards */
+.career-card:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+}
+
+/* Styling for the job title within the card */
+.career-card h3 {
+    color: #f0f0f0; /* Light color for the job title */
+    font-size: 1.5em; /* Font size for the title */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 15px; /* Space below the title */
+    /* Removed border-bottom and padding-bottom here to remove the line */
+}
+
+/* Styling for the detail paragraphs within the card */
+.career-card p {
+    color: #bbb; /* Lighter grey for the detail text */
+    font-size: 1em; /* Font size for details */
+    margin-top: 0;
+    margin-bottom: 10px; /* Space between detail paragraphs */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Remove bottom margin for the last paragraph in the card */
+.career-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Styling for links within the dark careers section (e.g., Contact Us link) */
+.careers-page-content a {
+    color: #5cb85c; /* Green link color */
+    text-decoration: none; /* Remove default underline */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for links */
+.careers-page-content a:hover {
+    color: #eee; /* Lighter color on hover for better contrast on dark */
+}
+
+/* --- Responsive Adjustments specific to Careers Page --- */
+@media (max-width: 768px) {
+     /* Adjust padding for the main content on small screens, considering the fixed header */
+     .careers-page-content {
+        padding-top: 120px;
+        padding-left: 15px; /* Adjust horizontal padding */
+        padding-right: 15px;
+     }
+
+     /* Allow paragraphs to take full width on small screens */
+     .careers-page-content p {
+         max-width: 100%;
+     }
+
+     /* Stack job cards vertically on small screens */
+     .career-listings {
+         grid-template-columns: 1fr;
+         gap: 15px; /* Reduce space between stacked cards */
+     }
+
+     /* Adjust internal padding of the career cards */
+     .career-card {
+         padding: 15px;
+     }
+
+      /* Adjust font size and spacing for the job title on small screens */
+      .career-card h3 {
+         font-size: 1.3em;
+         margin-bottom: 10px;
+      }
+
+       /* Adjust font size and spacing for the detail paragraphs on small screens */
+       .career-card p {
+         font-size: 0.9em;
+         margin-bottom: 8px;
+       }
+}
+
+/* --- Generic main container padding top rule (adjust if needed) --- */
+/* This rule helps push content down below the fixed header on all pages */
+main.container {
+    padding-top: 80px; /* Default padding top for main content */
+    min-height: calc(100vh - 120px); /* Basic minimum height calculation */
+}
+
+/* Adjust the generic main container padding for small screens where header might be taller */
+@media (max-width: 768px) {
+    main.container {
+         padding-top: 120px; /* More padding if header stacks vertically */
+    }
+}
+
+/* --- Contact Page Styling --- */
+/* This block styles the separate contact.html page with three cards */
+
+/* Styling for the main content area of the contact page */
+.contact-page-content {
+    padding: 60px 20px; /* Standard section padding top/bottom and horizontal */
+    background-color: #0e141b; /* Dark background, matching body and other sections */
+    color: #d4d4d4; /* Light text color for readability on dark background */
+    /* Add padding-top to push content below the fixed header */
+    padding-top: 100px; /* Adjust this value based on your header's height */
+    text-align: center; /* Center the main heading and intro paragraph */
+}
+
+/* Styling for the main heading on the contact page */
+.contact-page-content h2 {
+     font-size: 2.5em;
+     margin-bottom: 30px; /* Space below heading */
+     color: #eee; /* Lighter heading color */
+     /* text-align: center; <-- Already on parent */
+}
+
+/* Styling for general paragraphs in the contact page main content (outside the grid) */
+.contact-page-content p {
+     max-width: 800px; /* Limit paragraph width for readability */
+     margin: 0 auto 20px; /* Center paragraphs horizontally and add bottom margin */
+     color: #bbb; /* Slightly lighter grey for text */
+     /* text-align: center; <-- Already on parent */
+}
+
+/* --- New Grid container for the three contact cards --- */
+.contact-cards-grid {
+    display: grid;
+    /* Creates a responsive grid: minimum card width 250px, fills available space */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Space between cards */
+    max-width: 900px; /* Maximum width for the entire grid container */
+    margin: 40px auto; /* Center the grid and add vertical margin */
+}
+
+/* --- Styling for each individual contact card --- */
+.contact-card {
+    background-color: #1a2530; /* Dark background matching other cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 25px; /* Internal spacing within the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for card effect */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space vertically */
+    text-align: center; /* Center content (text, address, list) within the card */
+}
+
+/* Styling for headings inside the cards */
+.contact-card h3 {
+    color: #f0f0f0; /* Light color */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2a3b4d; /* Subtle separator line below heading */
+    padding-bottom: 10px;
+    text-align: center; /* Ensure centered */
+}
+
+/* Styling for general paragraphs inside the cards */
+.contact-card p {
+    max-width: 100%; /* Override parent max-width */
+    margin: 0 0 15px 0; /* Adjust margins */
+    color: #bbb; /* Text color */
+    text-align: center; /* Ensure centered */
+}
+
+/* Styling for the address inside the card */
+.contact-card address.company-address {
+    font-style: normal; /* Remove default italic */
+    color: #bbb; /* Match text color */
+    margin: 0 0 15px 0; /* Adjust margin */
+    line-height: 1.6; /* Improve readability */
+    text-align: center; /* Ensure centered */
+}
+
+
+/* Styling specifically for the paragraph containing the email link */
+/* Note: This class is inside a .contact-card now */
+.contact-email {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    /* Adjust margin based on where it is in the card */
+    margin-bottom: 15px; /* Space below email before social links (if in the same card) */
+    /* In the current structure, email is in its own card, adjust margin-bottom */
+     margin-bottom: 0; /* No margin needed at the bottom if it's the last element */
+}
+
+/* Styling for the email link itself */
+.contact-email a {
+     color: #5cb85c; /* --- GREEN Link Color --- */
+     text-decoration: none;
+     transition: color 0.3s ease;
+}
+/* Hover effect for the email link */
+.contact-email a:hover {
+    color: #eee; /* Lighter color on hover */
+}
+
+
+/* Styling for the social links list (inside the Connect card) */
+.social-links { /* This class is inside a .contact-card now */
+    list-style: none;
+    padding: 0;
+    /* Adjust margin based on where it is in the card */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Arrange icons horizontally */
+    justify-content: center; /* Center the icons */
+    gap: 25px; /* Space between icons */
+    margin-top: 15px; /* Space above icons */
+}
+
+/* Styling for the anchor tags wrapping social icons */
+.social-links a {
+    color: #5cb85c; /* --- GREEN Color for Icons --- */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* Styling for the Font Awesome icons themselves */
+.social-links a i {
+     font-size: 2em; /* Size of the icons */
+}
+
+/* Hover effect for the social icons */
+.social-links a:hover {
+    color: #eee; /* Lighter color on hover */
+}
+
+
+/* --- Responsive Adjustments specific to Contact Page --- */
+@media (max-width: 768px) {
+     /* Adjust padding for the main content on small screens, considering fixed header */
+     .contact-page-content {
+        padding-top: 120px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: left; /* Left-align main intro text on mobile */
+     }
+
+     /* Adjust padding and margins for the contact cards grid */
+     .contact-cards-grid {
+         grid-template-columns: 1fr; /* Stack cards vertically */
+         gap: 15px; /* Reduce gap */
+         margin-top: 30px;
+         margin-bottom: 30px;
+     }
+
+     /* Adjust padding for individual cards */
+     .contact-card {
+         padding: 20px;
+         text-align: center; /* Keep card content centered */
+     }
+
+     .contact-card h3 {
+         font-size: 1.3em;
+         margin-bottom: 10px;
+         padding-bottom: 8px;
+         text-align: center;
+     }
+
+      /* Adjust spacing and font size for text/address within cards on mobile */
+      .contact-card p,
+      .contact-card address.company-address {
+          margin: 0 0 10px 0;
+          font-size: 0.95em;
+          text-align: center;
+      }
+
+     /* Adjust email font size and spacing */
+     .contact-email {
+        font-size: 1em;
+        margin-bottom: 0; /* No margin if last element in card */
+     }
+
+     /* Adjust layout and spacing for social links on small screens */
+     .social-links {
+         justify-content: center; /* Center icons */
+         gap: 15px; /* Adjust space */
+         margin-top: 10px; /* Adjust space above icons */
+     }
+
+     /* Adjust icon size on small screens */
+     .social-links a i {
+         font-size: 1.8em;
+     }
+}
+
+/* --- Generic main container padding top rule --- */
+/* Ensure content is pushed down below fixed header on all pages */
+main.container {
+    padding-top: 80px; /* Default padding top for main content */
+    min-height: calc(100vh - 120px); /* Basic minimum height calculation */
+}
+
+/* Adjust the generic main container padding for small screens */
+@media (max-width: 768px) {
+    main.container {
+         padding-top: 120px; /* More padding if header stacks vertically */
+    }
+}
+
+/* Optional: Keep scroll-behavior smooth if used elsewhere (e.g., home page CTA) */
+/* html { scroll-behavior: smooth; } */
+
+
+
+/* Add this rule, preferably at the top of your style.css */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ... rest of your styles including the footer styles ... */
+
+/* --- Footer Styling (Modify and add these rules within your existing footer styles) --- */
+
+/* ... existing footer, footer-content-wrapper, footer-copyright rules ... */
+
+/* Styling for the contact information section in the footer */
+.footer-contact {
+    text-align: right; /* Align the contact block content to the right */
+}
+
+/* Styling for the heading within the footer contact section */
+.footer-contact h4 {
+    color: #eee; /* Lighter color for heading */
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* --- New wrapper for inline email and social links --- */
+.contact-details-inline {
+    display: flex; /* Arrange children (email p and ul) in a row */
+    align-items: center; /* Vertically center the items */
+    gap: 20px; /* Space between the email and the social icons block */
+    /* On larger screens, this flex container is aligned right because its parent (.footer-contact) has text-align: right */
+     justify-content: flex-end; /* Explicitly align items to the end (right) within the flex container */
+}
+
+/* Styling for the paragraph containing the email */
+.footer-contact p {
+    /* Remove previous margin as flex gap handles spacing */
+    margin: 0;
+    color: #bbb; /* Text color for the email paragraph */
+    /* Ensure the email link inherits this color or is explicitly set below */
+}
+
+/* Styling for the email link within the footer */
+.footer-contact p a {
+    color: #bbb; /* Explicitly set email link color (light grey) */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+    /* font-size: 1em; */ /* Optional: set font size if different from parent p */
+}
+
+/* Hover effect for the email link */
+.footer-contact p a:hover {
+    color: #eee; /* Lighter color on hover */
+}
+
+
+/* Styling for the social links list in the footer */
+.footer-social-links {
+    list-style: none; /* Remove list bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Arrange icons horizontally */
+    /* justify-content: flex-end; <-- Removed as parent .contact-details-inline now aligns items */
+    gap: 15px; /* Space between icons */
+}
+
+/* Styling for the anchor tags wrapping social icons */
+.footer-social-links a {
+    color: #5cb85c; /* Green color for icons */
+    text-decoration: none; /* Ensure no underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+    display: inline-block; /* Ensure hover area works */
+}
+
+/* Styling for the Font Awesome icons themselves */
+.footer-social-links a i {
+     font-size: 1.5em; /* Size of the icons */
+}
+
+/* Hover effect for the social icons */
+.footer-social-links a:hover {
+    color: #eee; /* Lighter color on hover */
+}
+
+/* --- Responsive Adjustments for Footer --- */
+@media (max-width: 768px) {
+    /* ... existing footer responsive rules for stacking copyright and contact block ... */
+
+    .footer-contact {
+        text-align: center; /* Center the contact block */
+    }
+
+    /* Stack email and social links vertically on small screens */
+    .contact-details-inline {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 10px; /* Reduced space between stacked items */
+        justify-content: center; /* Center the stacked column */
+    }
+
+     /* Ensure text alignment is centered within the stacked email paragraph */
+     .contact-details-inline p {
+        text-align: center;
+        margin: 0; /* Ensure margin is controlled by flex gap */
+     }
+
+    /* Ensure social links list is centered when stacked */
+    .footer-social-links {
+        justify-content: center; /* Center icons within their row */
+        gap: 15px; /* Keep consistent gap between icons */
+        margin-top: 0; /* Ensure no extra margin */
+    }
+
+     /* Adjust icon size on small screens */
+     .footer-social-links a i {
+         font-size: 1.3em;
+     }
+
+     /* ... rest of footer responsive rules ... */
+}
+
+/* --- Generic main container padding top rule --- */
+/* main.container { padding-top: 80px; min-height: calc(100vh - 120px); } */
+/* @media (max-width: 768px) { main.container { padding-top: 120px; } } */
+
+
+/* --- Project Genesis Detail Page Styling --- */
+/* This block styles the project-genesis.html page */
+
+.project-detail-page {
+    padding: 60px 20px; /* Standard section padding top/bottom and horizontal */
+    background-color: #0e141b; /* Dark background, matching body and other sections */
+    color: #d4d4d4; /* Light text color for readability on dark background */
+    /* Add padding-top to push content below the fixed header */
+    padding-top: 100px; /* Adjust this value based on your header's height */
+    text-align: center; /* Center content elements like headings, image block, etc. */
+}
+
+/* Styling for the main project title */
+.project-detail-page h1 {
+    font-size: 3em;
+    color: #eee; /* Light heading color */
+    margin-bottom: 30px;
+    text-align: center; /* Explicitly center title */
+}
+
+/* Container for the project image */
+.project-detail-image {
+    max-width: 800px; /* Limit maximum width of the image container */
+    margin: 0 auto 30px auto; /* Center the image container block and add margin below */
+}
+
+/* Styling for the project image itself */
+.project-detail-image img {
+    display: block; /* Remove extra space below the image */
+    max-width: 100%; /* Ensure image is responsive and doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Match card styling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Match card styling */
+}
+
+/* Container for the description text */
+.project-detail-description {
+    max-width: 800px; /* Limit maximum width of the description block */
+    margin: 0 auto 30px auto; /* Center the description block and add margin below */
+    color: #bbb; /* Slightly lighter text color for paragraphs */
+    text-align: left; /* Left-align the description text within its block */
+    line-height: 1.7; /* Improve readability */
+}
+
+/* Styling for paragraphs within the description block */
+.project-detail-description p {
+    margin-bottom: 15px; /* Add space between paragraphs if there are multiple */
+    /* text-align: left; <-- Inherits from parent */
+}
+
+/* Reuse existing .coming-soon style */
+/* Note: Ensure the original .coming-soon style exists elsewhere in your CSS */
+.project-detail-page .coming-soon {
+    font-size: 1.2em; /* Make it slightly larger for prominence */
+    color: #aaa;
+    text-align: center; /* Explicitly center */
+    margin-top: 20px;
+}
+
+
+/* --- Styling for the link on the Project Genesis card (index.html) --- */
+/* This makes the project info area clickable */
+.project-card .project-info-link {
+    text-decoration: none; /* Remove the default underline from the link */
+    color: none; /* Inherit the text color from the parent .project-card */
+    display: block; /* Make the anchor tag a block element so it covers the .project-info area */
+    height: 100%; /* Make the anchor tag fill the height of its parent container (.project-card or part of it) */
+    /* Ensure this doesn't interfere with the hover effect on the .project-card itself */
+}
+
+/* Optional: Add a hover effect for text elements within the linked area */
+.project-card .project-info-link:hover h3 {
+     color: #fff; /* Example: Change the heading color on hover to green */
+}
+
+
+/* --- Responsive Adjustments for Project Detail Page --- */
+@media (max-width: 768px) {
+    /* Adjust padding for the main content on small screens, considering the fixed header */
+    .project-detail-page {
+        padding-top: 120px; /* Adjust if header stacks */
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: left; /* Left-align the overall content block on mobile */
+    }
+
+    /* Adjust font size and margin for main title on mobile */
+    .project-detail-page h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center; /* Keep centered */
+    }
+
+    /* Adjust margins for image container on mobile */
+     .project-detail-image {
+        margin-bottom: 20px;
+     }
+
+    /* Adjust margins and text alignment for description on mobile */
+    .project-detail-description {
+        margin-bottom: 20px;
+        text-align: left; /* Keep left-aligned */
+    }
+
+    /* Adjust font size and margin for Coming Soon on mobile */
+     .project-detail-page .coming-soon {
+        font-size: 1em;
+        margin-top: 10px;
+     }
+}
+
+/* --- Generic main container padding top rule (should already exist) --- */
+/* Ensure content is pushed down below fixed header on all pages */
+/* main.container { padding-top: 80px; min-height: calc(100vh - 120px); } */
+
+/* Adjust the generic main container padding for small screens */
+/* @media (max-width: 768px) { main.container { padding-top: 120px; } } */
+
+/* --- Project Genesis Detail Page Hero Styling --- */
+/* This block styles the hero section at the top of project-genesis.html */
+.project-genesis-hero {
+    position: relative;
+    color: #fff;
+    text-align: center; /* Center text over the image */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* --- Increased height (e.g., from 60vh to 80vh) --- */
+    min-height: 500px; /* --- Increased minimum height (e.g., from 400px to 500px) --- */
+    padding: 0; /* Remove default padding */
+    margin-top: 0; /* Remove default margin */
+    overflow: hidden; /* Hide anything outside the bounds */
+}
+
+
+/* Wrapper to position the image absolutely over the hero section */
+.project-genesis-hero-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place image behind the content */
+}
+
+/* Styling for the hero image itself */
+.project-genesis-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scale and crop the image to cover the container */
+    object-position: center; /* --- Explicitly ensure the center of the image is visible --- */
+    display: block;
+}
+
+/* Reuse the existing hero overlay style if you have one */
+/* .hero-overlay { ... } */
+
+/* Container for text content placed over the image */
+/* Reusing .hero-content for similar styling to the home page hero text */
+.project-genesis-hero .hero-content {
+    position: relative;
+    z-index: 2; /* Place content above the image and overlay */
+    padding: 20px;
+    max-width: 90%; /* Limit max width of the text block */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+    text-align: center; /* Ensure text is centered within this block */
+    /* The .container class also adds margin: 0 auto; and padding which helps centering the block */
+}
+
+/* Styling for the main project title within the hero */
+.project-genesis-hero .hero-content h1 {
+    font-size: 3.5em; /* Adjust title size */
+    margin-bottom: 0; /* Remove bottom margin if no subtitle */
+    font-weight: 800;
+    color: #fff; /* Ensure title color is light */
+}
+
+/* --- Project Detail Content Styling (Below the Hero) --- */
+/* This block styles the content section below the hero on project-genesis.html */
+.project-detail-content {
+    padding: 60px 0px; /* Standard section padding top/bottom and horizontal */
+    background-color: #fff; /* --- Set the background color to white --- */
+    color: #333; /* --- Set the text color to a dark shade for readability on white --- */
+    /* No padding-top needed here, as the hero is above it */
+    text-align: center; /* Center content elements like description block, coming soon */
+}
+
+/* Container for the description text */
+/* --- Removed card styling from this block --- */
+.project-detail-content .project-detail-description {
+    max-width: 800px; /* Keep maximum width of the description block */
+    margin: 0 auto 30px auto; /* Keep centering the block and add margin below */
+    /* Removed: background-color, padding, border-radius, box-shadow */
+    color: inherit; /* --- Inherit color from parent (.project-detail-content) which is now dark --- */
+    text-align: left; /* Keep text left-aligned within its block */
+    line-height: 1.7; /* Keep line height */
+}
+
+
+
+
+/* Styling for paragraphs within the description block */
+.project-detail-content .project-detail-description p {
+    margin-bottom: 15px; /* Add space between paragraphs if there are multiple */
+    color: inherit; /* Ensure paragraphs use the color set on their parent */
+    /* text-align: left; <-- Inherits from parent */
+}
+
+/* Remove bottom margin for the last paragraph in the description block */
+.project-detail-content .project-detail-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Reuse existing .coming-soon style */
+/* Note: Ensure the original .coming-soon style exists elsewhere in your CSS */
+/* Adjust color for visibility on white background if needed, though #aaa might still work */
+.project-detail-content .coming-soon {
+    font-size: 1.2em; /* Keep size */
+    color: #555; /* --- Adjust color for visibility on white background --- */
+    text-align: center; /* Explicitly center */
+    margin-top: 20px;
+}
+
+
+
+/* --- Responsive Adjustments for Project Detail Content --- */
+@media (max-width: 768px) {
+    .project-genesis-hero {
+        height: 100vh; /* --- Also set to 100vh for mobile --- */
+        min-height: 350px; /* Adjust minimum height for mobile */
+        padding-top: 80px; /* Keep padding for fixed header */
+     }
+    /* Adjust padding for content below Hero on mobile */
+    .project-detail-content {
+       padding-top: 30px; /* Space between Hero and content */
+        padding-bottom: 60px; /* Keep bottom padding */
+        text-align: left; /* Left-align the overall content block on mobile */
+    }
+
+    /* Adjust margins and text alignment for description on mobile */
+    .project-detail-content .project-detail-description {
+        margin-bottom: 20px;
+        /* Removed padding adjustment as padding is removed from this block */
+        text-align: left;
+    }
+
+     /* Paragraphs inside should still inherit colors and manage their margins */
+     .project-detail-content .project-detail-description p,
+     .project-detail-content .project-detail-description p:last-child {
+         margin-bottom: 10px; /* Adjust margin between paragraphs on mobile */
+     }
+     .project-detail-content .project-detail-description p:last-child {
+         margin-bottom: 0; /* Ensure the last one has no bottom margin */
+     }
+
+
+
+    /* Adjust font size and margin for Coming Soon on mobile */
+    .project-detail-content .coming-soon {
+        font-size: 1em;
+        margin-top: 10px;
+        color: #555; /* Keep color consistent for mobile */
+    }
+}
+
+/* --- Generic main container padding top rule (should already exist) --- */
+/* Ensure content is pushed down below fixed header on all pages */
+/* main.container { padding-top: 80px; min-height: calc(100vh - 120px); } */
+
+/* Adjust the generic main container padding for small screens */
+/* @media (max-width: 768px) { main.container { padding-top: 120px; } } */
+
+/* --- Launch Announcement Styling --- */
+.launch-announcement {
+    margin-top: 0px; /* Space above this section */
+    padding-top: 0px; /* Padding inside the top */
+    border-top: 1px solid #eee; /* Optional: Add a subtle line above */
+    text-align: center; /* Center the text and link block */
+}
+
+.launch-announcement h3 {
+    font-size: 1.8em;
+    color: #333; /* Dark color for heading on white background */
+    margin-bottom: 15px;
+}
+
+.launch-announcement p {
+    font-size: 1.8
+    em;
+    color: #555; /* Slightly lighter color for paragraph */
+    margin-bottom: 20px;
+}
+
+.store-links {
+    display: flex; /* Use flexbox to align icons horizontally */
+    justify-content: center; /* Center the icons */
+    gap: 30px; /* Space between the icons */
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.store-links a img {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Add a slight hover effect */
+}
+
+.store-links a img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* --- Responsive Adjustments for Launch Announcement --- */
+@media (max-width: 768px) {
+    .launch-announcement {
+        margin-top: 30px; /* Adjust margin for mobile */
+        padding-top: 20px; /* Adjust padding for mobile */
+    }
+
+    .launch-announcement h3 {
+        font-size: 1.5em; /* Adjust font size */
+        margin-bottom: 10px;
+    }
+
+    .launch-announcement p {
+         font-size: 1em; /* Adjust font size */
+         margin-bottom: 15px;
+    }
+
+    .store-links {
+        gap: 20px; /* Adjust space between icons */
+    }
+
+     .store-links a img {
+        width: 120px; /* Adjust size for mobile */
+     }
 }
