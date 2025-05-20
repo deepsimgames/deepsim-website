@@ -265,7 +265,7 @@ nav a:hover {
 
 .project-card a {
     display: inline-block;
-    color: #5cb85c;
+    color: #0056b3;
     text-decoration: none;
     font-weight: regular;
     transition: color 0.3s ease;
@@ -367,7 +367,14 @@ footer .container {
 }
 
 /* Add this block to your existing style.css */
-/* --- Careers Page Styling - Dark Theme --- */
+/* --- Careers Page Styling - Dark Theme ---
+
+
+        /* Add padding to the main content to create space below the sticky header */
+        .contact-section {
+            padding-top: 50px; /* Increased padding to add space below the sticky header */
+            padding-bottom: 40px; /* Keep existing bottom padding */
+        }
 
 /* Styling for the main content area of the careers page */
 .careers-page-content {
@@ -443,7 +450,7 @@ footer .container {
 
 /* Styling for links within the dark careers section (e.g., Contact Us link) */
 .careers-page-content a {
-    color: #5cb85c; /* Green link color */
+    color: #0056b3; /* Green link color */
     text-decoration: none; /* Remove default underline */
     font-weight: bold;
     transition: color 0.3s ease; /* Smooth hover transition */
@@ -600,7 +607,7 @@ main.container {
 
 /* Styling for the email link itself */
 .contact-email a {
-     color: #5cb85c; /* --- GREEN Link Color --- */
+     color: #0056b3; /* --- GREEN Link Color --- */
      text-decoration: none;
      transition: color 0.3s ease;
 }
@@ -624,7 +631,7 @@ main.container {
 
 /* Styling for the anchor tags wrapping social icons */
 .social-links a {
-    color: #5cb85c; /* --- GREEN Color for Icons --- */
+    color: #0056b3; /* --- GREEN Color for Icons --- */
     text-decoration: none;
     transition: color 0.3s ease;
     display: inline-block;
@@ -785,7 +792,7 @@ html {
 
 /* Styling for the anchor tags wrapping social icons */
 .footer-social-links a {
-    color: #5cb85c; /* Green color for icons */
+    color: #0056b3; /* Green color for icons */
     text-decoration: none; /* Ensure no underline */
     transition: color 0.3s ease; /* Smooth hover effect */
     display: inline-block; /* Ensure hover area works */
